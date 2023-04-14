@@ -1,14 +1,14 @@
 import React from "react";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import User from "./user/pages/User.pages";
 
 function App() {
   return (
-    <Router>
-      <Route>
-
-      </Route>
-    </Router>
+    <Routes>
+      <Route path="/" element=<h1>Navbar</h1> />
+      <Route path="user" element={<User />} />
+    </Routes>
   )
 }
 
-export default App
+export default App;
