@@ -1,7 +1,7 @@
 const User = () => {
     return (
         <div>
-            User component
+            This is User component
         </div>
     )
 }
