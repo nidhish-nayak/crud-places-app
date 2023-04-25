@@ -3,3 +3,27 @@
     height: 64px;
     border-radius: 50%;
 }
+
+.user-item__content {
+    display: flex;
+    margin: 1em;
+    background: rgb(61, 61, 61);
+    padding: 1em;
+}
+
+.user-item__info {
+    margin: 0 1em;
+}
+
+.user-item__info h2 {
+    color: rgb(255, 218, 54)
+}
+
+.user-item {
+    width: max-content;
+}
+
+.user-item__content:hover {
+    background: rgb(30, 30, 30);
+    cursor: pointer;
+}

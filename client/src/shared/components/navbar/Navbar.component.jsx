@@ -6,7 +6,7 @@ const Navbar = () => {
         <div>
             <div className="navbar">
                 <div className="navbar-logo">
-                    <img className="navbar-img" src="https://img.icons8.com/fluency/96/null/ground-transportation.png" />
+                    <img className="navbar-img" src="https://img.icons8.com/bubbles/100/null/react.png" />
                     <h3 className="navbar-title">React 18.0v</h3>
                 </div>
                 <ul className="navbar-list">
