@@ -4,7 +4,7 @@ const User = () => {
     const USERS = [{
         id: 1,
         name: "John",
-        image: "myimage",
+        image: "https://img.icons8.com/external-avatar-andi-nur-abdillah/64/null/external-avatar-business-avatar-circle-avatar-andi-nur-abdillah-14.png",
         places: 3
     }];
 
