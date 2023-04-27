@@ -6,7 +6,8 @@
 
 .user-item__content {
     display: flex;
-    margin: 1em;
+    margin: 0em 1em;
+    width: 20rem;
     background: rgb(61, 61, 61);
     padding: 1em;
 }
