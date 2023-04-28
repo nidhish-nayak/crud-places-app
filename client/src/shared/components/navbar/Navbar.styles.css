@@ -1,33 +1,4 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #626262;
-}
-
-.navbar-logo {
-    display: flex;
-    align-items: center;
-}
-
 .navbar-img {
-    margin: 0.5em 0.5em 0.5em 1em;
     height: 50px;
     width: 50px;
-}
-
-.navbar-list {
-    display: flex;
-    margin: 0 1em;
-    padding-right: 4em;
-}
-
-.navbar-item {
-    margin: 0 1.5em;
-    list-style: none;
-
-}
-
-.navbar-title {
-    margin: 0
 }
