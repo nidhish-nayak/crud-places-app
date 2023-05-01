@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NewPlace from "./places/pages/NewPlace.pages";
-import Navbar from "./shared/components/navbar/Navbar.component";
+import Navbar from "./shared/components/Navbar.component";
 import User from "./user/pages/User.pages";
 
 function App() {

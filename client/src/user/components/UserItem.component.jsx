@@ -1,5 +1,3 @@
-import './UserItem.styles.css';
-
 const UserItem = props => {
     return (
         <li className="user-item">

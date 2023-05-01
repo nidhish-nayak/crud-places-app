@@ -1,5 +1,4 @@
-import UserItem from '../UserItem/UserItem.component';
-import './UserList.styles.css';
+import UserItem from './UserItem.component';
 
 const UserList = props => {
     if (props.items.length === 0) {
