@@ -4,7 +4,7 @@ import NewPlace from "./places/pages/NewPlace.pages";
 import Navbar from "./shared/components/Navbar.component";
 import User from "./user/pages/User.pages";
 
-function App() {
+const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Navbar />} >
