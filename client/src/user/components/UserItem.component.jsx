@@ -5,7 +5,7 @@ const UserItem = props => {
                 <div>
                     <img src={props.image} alt="alt" />
                 </div>
-                <div className="px-2">
+                <div className="px-2 font-poppins">
                     <p className="font-bold">{props.name}</p>
                     <p>{props.placeCount} {props.placeCount === 1 ? "Place" : "Places"}</p>
                 </div>

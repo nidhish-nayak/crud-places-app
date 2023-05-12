@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'lato': ['Lato', 'sans-serif'],
+      'roboto': ['Roboto', 'sans-serif'],
+      'title': ['Patrick Hand', 'cursive'],
+      'poppins': ['Poppins', 'sans-serif']
+    }
   },
   plugins: ["prettier-plugin-tailwindcss"],
   mode: 'jit',
