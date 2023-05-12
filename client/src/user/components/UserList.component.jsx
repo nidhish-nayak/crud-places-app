@@ -3,7 +3,7 @@ import UserItem from './UserItem.component';
 const UserList = props => {
     if (props.items.length === 0) {
         return (
-            <div className='p-2 m-4'>
+            <div className='pl-2 my-20 text-2xl font-extrabold text-center'>
                 <h2>No users found</h2>
             </div>
         )

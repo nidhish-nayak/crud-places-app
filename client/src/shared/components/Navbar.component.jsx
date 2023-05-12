@@ -5,7 +5,7 @@ const Navbar = () => {
         <div>
             <div className='flex items-center justify-between p-2 bg-gray-900'>
                 <div className='flex items-center'>
-                    <img width="60" height="60" className="p-2 ml-4 sm:ml-2 sm:p-1" src="https://img.icons8.com/cute-clipart/64/beach-umbrella.png" alt="beach-umbrella" />
+                    <img width="54" height="54" className="p-2 ml-4 sm:ml-2 sm:p-1" src="https://img.icons8.com/cute-clipart/64/beach-umbrella.png" alt="beach-umbrella" />
                     <h1 className='pl-2 font-sans text-sm font-bold text-white sm:pl-1 lg:text-2xl lg:mx-4'>My Posts</h1>
                 </div>
                 <ul className='flex font-sans text-gray-100' >
