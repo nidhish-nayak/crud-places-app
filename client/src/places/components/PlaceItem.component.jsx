@@ -1,7 +1,7 @@
-const PlaceItem = () => {
+const PlaceItem = (props) => {
     return (
         <div>
-            Place Item
+            {props.name}
         </div>
     )
 }
