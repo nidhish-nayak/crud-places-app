@@ -1,8 +1,10 @@
+import PlaceList from "../components/PlaceList.component";
+
 const UserPlace = () => {
+    const PLACES = [];
+
     return (
-        <div>
-            <h1>User Place Works</h1>
-        </div>
+        <PlaceList items={PLACES} />
     )
 }
 
