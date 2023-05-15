@@ -1,9 +1,9 @@
 const PlaceItem = (props) => {
     return (
-        <li className="flex flex-col justify-between p-4 mx-4 my-4 text-white rounded-lg bg-neutral-900 drop-shadow-sm">
+        <li className="flex flex-col justify-between p-4 mx-4 my-4 text-white rounded-lg sm:mx-auto sm:w-96 bg-neutral-900 drop-shadow-sm">
             <div>
                 <div className="mb-2">
-                    <img className="rounded-md md:object-contain md:h-60 md:w-96" src={props.image} alt={props.title} />
+                    <img className="rounded-md sm:w-96 sm:h-60" src={props.image} alt={props.title} />
                 </div>
                 <div className="mb-4">
                     <h2 className="p-1 -mb-2 font-sans text-xl font-bold">{props.title}</h2>
@@ -12,9 +12,9 @@ const PlaceItem = (props) => {
                 </div>
             </div>
             <div className="flex">
-                <button className="px-3 py-2 m-1 text-xs font-semibold transition-all duration-200 ease-linear bg-teal-900 rounded-md cursor-pointer sm:text-sm drop-shadow-xl hover:bg-teal-300 hover:text-gray-900">VIEW ON MAP</button>
-                <button className="px-3 py-2 m-1 text-xs font-semibold transition-all duration-200 ease-linear bg-teal-900 rounded-md cursor-pointer sm:text-sm drop-shadow-xl hover:bg-teal-300 hover:text-gray-900">EDIT</button>
-                <button className="px-3 py-2 m-1 text-xs font-semibold transition-all duration-200 ease-linear bg-teal-900 rounded-md cursor-pointer sm:text-sm drop-shadow-xl hover:bg-teal-300 hover:text-gray-900">DELETE</button>
+                <button className="px-2 py-2 m-1 text-xs font-normal transition-all duration-200 ease-linear bg-teal-900 rounded-md cursor-pointer sm:px-3 sm:font-semibold sm:text-sm drop-shadow-xl hover:bg-teal-300 hover:text-gray-900">VIEW ON MAP</button>
+                <button className="px-2 py-2 m-1 text-xs font-normal transition-all duration-200 ease-linear bg-teal-900 rounded-md cursor-pointer sm:px-3 sm:font-semibold sm:text-sm drop-shadow-xl hover:bg-teal-300 hover:text-gray-900">EDIT</button>
+                <button className="px-2 py-2 m-1 text-xs font-normal transition-all duration-200 ease-linear bg-teal-900 rounded-md cursor-pointer sm:px-3 sm:font-semibold sm:text-sm drop-shadow-xl hover:bg-teal-300 hover:text-gray-900">DELETE</button>
             </div>
         </li>
     )
