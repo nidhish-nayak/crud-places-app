@@ -4,13 +4,13 @@ const UserPlace = () => {
     const PLACES = [
         {
             id: 1,
-            name: "Belthangady",
-            detail: "Address: Dakshina Kannada, Karnataka"
+            title: "Belthangady",
+            description: "Address: Dakshina Kannada, Karnataka"
         },
         {
             id: 2,
-            name: "Bangalore",
-            detail: "Address: City, Karnataka"
+            title: "Bangalore",
+            description: "Address: City, Karnataka"
         }
     ];
 
