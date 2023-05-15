@@ -33,11 +33,11 @@ const Hamburger = () => {
       </button>
       <ul className={
         `${isOpen ? 'block' : 'hidden'} drop-shadow-2xl
-          absolute z-10 flex flex-col top-0 bottom-1/4 inset-x-0 pt-20 text-teal-900 bg-white`
+          absolute z-10 flex flex-col font-sans antialiased top-0 bottom-1/4 inset-x-0 pt-20 text-teal-900 bg-white`
       }>
-        <Link onClick={toggleMenu} className="w-2/4 py-3 mx-auto my-2 text-lg font-bold text-center rounded-lg drop-shadow-sm hover:bg-teal-500 bg-slate-100 text-neutral-900" to="/">Users</Link>
+        <Link onClick={toggleMenu} className="w-2/4 py-3 mx-auto my-2 text-lg font-bold text-center text-white bg-teal-700 rounded-lg drop-shadow-sm hover:bg-teal-200" to="/places/new">+ Create</Link>
         <Link onClick={toggleMenu} className="w-2/4 py-3 mx-auto my-2 text-lg font-bold text-center rounded-lg drop-shadow-sm hover:bg-teal-500 bg-slate-100 text-neutral-900" to="/u1/places">Places</Link>
-        <Link onClick={toggleMenu} className="w-2/4 py-3 mx-auto my-2 text-lg font-bold text-center rounded-lg drop-shadow-sm hover:bg-teal-500 bg-slate-100 text-neutral-900" to="/places/new">Create</Link>
+        <Link onClick={toggleMenu} className="w-2/4 py-3 mx-auto my-2 text-lg font-bold text-center rounded-lg drop-shadow-sm hover:bg-teal-500 bg-slate-100 text-neutral-900" to="/">Users</Link>
         <Link onClick={toggleMenu} className="w-2/4 py-3 mx-auto my-2 text-lg font-bold text-center rounded-lg drop-shadow-sm hover:bg-teal-500 bg-slate-100 text-neutral-900" to="/auth">Login</Link>
       </ul>
     </div>

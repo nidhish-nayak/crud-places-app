@@ -1,3 +1,4 @@
+import CardContainer from '../../shared/pages/CardContainer.component';
 import UserItem from './UserItem.component';
 
 const UserList = props => {
@@ -9,7 +10,7 @@ const UserList = props => {
         )
     } else
         return (
-            <ul className='grid justify-center md:m-2 md:p-1 lg:m-4 lg:p-2 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
+            <CardContainer>
                 {props.items.map(user =>
                     <UserItem
                         key={user.id}
@@ -19,7 +20,7 @@ const UserList = props => {
                         placeCount={user.places}
                     />)
                 }
-            </ul>
+            </CardContainer>
         )
 }
 

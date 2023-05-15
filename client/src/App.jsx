@@ -10,7 +10,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Navbar />} >
         <Route index element={<User />} />
-        <Route path="/u1/places" element={<UserPlace />} />
+        <Route path="/:userId/places" element={<UserPlace />} />
         <Route path="/places/new" element={<NewPlace />} />
       </Route>
       {/* Here Navigate hook is used to Redirect any invalid url route to the homepage */}
