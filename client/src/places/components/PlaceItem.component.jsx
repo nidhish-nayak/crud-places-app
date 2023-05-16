@@ -1,9 +1,9 @@
 const PlaceItem = (props) => {
     return (
-        <li className="flex flex-col justify-between p-4 mx-4 my-4 text-white rounded-lg sm:mx-auto sm:w-96 bg-neutral-900 drop-shadow-sm">
+        <li className="flex flex-col justify-between p-4 mx-4 my-4 text-white rounded-lg sm:mx-auto sm:w-96 bg-gradient-to-r from-neutral-950 to-neutral-900">
             <div>
                 <div className="mb-2">
-                    <img className="rounded-md sm:w-96 sm:h-60" src={props.image} alt={props.title} />
+                    <img className="rounded-md drop-shadow-md sm:w-96 sm:h-60" src={props.image} alt={props.title} />
                 </div>
                 <div className="mb-4">
                     <h2 className="p-1 -mb-2 font-sans text-xl font-bold">{props.title}</h2>
