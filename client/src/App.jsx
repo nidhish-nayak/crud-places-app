@@ -2,7 +2,7 @@ import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import NewPlace from "./places/pages/NewPlace.pages";
 import UserPlace from "./places/pages/UserPlace.pages";
-import Navbar from "./shared/components/Navbar.component";
+import Navbar from "./shared/pages/Navbar.component";
 import User from "./user/pages/User.pages";
 
 const App = () => {
