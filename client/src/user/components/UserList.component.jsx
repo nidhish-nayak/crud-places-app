@@ -1,4 +1,4 @@
-import CardContainer from '../../shared/pages/CardContainer.component';
+import CardContainer from '../../shared/components/CardContainer.component';
 import UserItem from './UserItem.component';
 
 const UserList = props => {
