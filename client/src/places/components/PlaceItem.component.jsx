@@ -16,7 +16,7 @@ const PlaceItem = (props) => {
     };
 
     return (
-        <li className="flex flex-col justify-between mx-4 my-4 text-white rounded-sm sm:mx-auto sm:w-96 bg-gradient-to-r from-neutral-950 to-neutral-900">
+        <li className="flex flex-col justify-between mx-4 my-4 text-white rounded-sm drop-shadow-lg sm:mx-auto sm:w-96 bg-gradient-to-r from-neutral-950 to-neutral-900">
             <div>
                 <div className="mb-2">
                     <img className="sm:w-96 sm:h-60" src={props.image} alt={props.title} />
