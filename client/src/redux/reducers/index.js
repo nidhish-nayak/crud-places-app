@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import placesReducer from './placesReducer';
-import usersReducer from './usersReducer';
+import modalReducer from './modalSlice';
 
 const rootReducer = combineReducers({
-    places: placesReducer,
-    users: usersReducer,
+    modal: modalReducer,
 });
 
 export default rootReducer;

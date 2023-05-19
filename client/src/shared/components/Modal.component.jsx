@@ -1,30 +1,20 @@
-import ReactDOM from 'react-dom';
+const Modal = ({ isOpen, onClose, title, description }) => {
+    if (!isOpen) {
+        return null
+    };
 
-// This is a general reusable Modal Overlay. This uses normal css and uses props to create a dynamic modal.
-// This is the reason why we have not included tailwind classes here.
-const ModalOverlay = () => {
-    const content = (
-        <div className={`modal ${props.className}`} style={props.style}>
-            <header className={`modal__header ${props.headerClass}`}>
-                <h2>{props.header}</h2>
-            </header>
-            <form onSubmit={props.onSubmit ? props.onSubmit : event => event.preventDefault} action="">
-                <div className={`modal__content ${contentClass}`}>{props.children}</div>
-            </form>
-            <footer className={`modal__footer ${props.footerClass}`}>
-                {props.footer}
-            </footer>
-        </div>
-    )
-    return ReactDOM.createPortal(content, document.getElementById('modal-root'));
-}
-
-const Modal = props => {
     return (
-        <div>
-            Modal
+        <div className="fixed inset-0 z-50 flex items-center justify-center m-2 sm:m-0">
+            <div className="fixed inset-0 bg-gray-900 opacity-50" onClick={onClose}></div>
+            <div className="z-10 p-6 bg-white rounded-lg shadow-lg w-96">
+                <h2 className="mb-4 text-xl font-bold">{title}</h2>
+                <p className="mb-6">{description}</p>
+                <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-600" onClick={onClose}>
+                    Close
+                </button>
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default Modal;
