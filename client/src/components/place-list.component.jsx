@@ -1,4 +1,4 @@
-import PlaceItem from './PlaceItem.component';
+import PlaceItem from '../../places/components/PlaceItem.component';
 
 const PlaceList = (props) => {
     if (props.items.length === 0) {
