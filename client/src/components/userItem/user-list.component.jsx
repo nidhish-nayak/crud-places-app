@@ -1,5 +1,5 @@
-import CardContainer from '../../shared/components/CardContainer.component';
-import UserItem from './UserItem.component';
+import CardContainer from '../components/CardContainer.component';
+import UserItem from './user-item.component';
 
 const UserList = props => {
     if (props.items.length === 0) {
