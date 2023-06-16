@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import Hamburger from '../components/Hamburger.component';
+import Hamburger from '../components/hamburger';
 
 const Navbar = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeModal, openModal } from '../../redux/reducers/modalSlice';
-import Modal from '../../shared/components/Modal.component';
+import Modal from '../components/modal';
+import { closeModal, openModal } from '../redux/reducers/modalSlice';
 
 const PlaceItem = (props) => {
     const dispatch = useDispatch();

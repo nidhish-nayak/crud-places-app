@@ -1,9 +1,9 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import NewPlace from "./routes/NewPlace.pages";
-import UserPlace from "./routes/UserPlace.pages";
-import Navbar from "./shared/pages/Navbar.component";
-import User from "./user/pages/User.pages";
+import Navbar from "./routes/navbar";
+import NewPlace from "./routes/new-place";
+import User from "./routes/user";
+import UserPlace from "./routes/user-place";
 
 const App = () => {
   return (

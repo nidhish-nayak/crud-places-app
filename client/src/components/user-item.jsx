@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Avatar from "../components/Avatar.component";
-import Card from "../components/Card.component";
+import Avatar from "./avatar";
+import Card from "./card";
 
 const UserItem = props => {
     return (
