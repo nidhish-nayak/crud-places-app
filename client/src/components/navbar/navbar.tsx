@@ -5,9 +5,9 @@ import Hamburger from "../hamburger/hamburger";
 const Navbar = () => {
 	return (
 		<div>
-			<nav className="flex items-center justify-around p-2 sm:justify-between">
+			<nav className="flex items-center justify-between p-2">
 				<img
-					className="object-scale-down w-3/5 sm:w-max sm:mx-0 sm:p-4 h-14 sm:h-16"
+					className="object-scale-down h-8 w-min sm:w-max sm:mx-0 sm:p-4 sm:h-16"
 					src="../../../logo-light.svg"
 					alt="Logo"
 				/>
