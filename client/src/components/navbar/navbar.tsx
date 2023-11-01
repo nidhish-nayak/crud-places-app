@@ -6,11 +6,13 @@ const Navbar = () => {
 	return (
 		<div>
 			<nav className="flex items-center justify-between p-2">
-				<img
-					className="object-scale-down h-8 w-min sm:w-max sm:mx-0 sm:p-4 sm:h-16"
-					src="../../../logo-light.svg"
-					alt="Logo"
-				/>
+				<a href="/">
+					<img
+						className="object-scale-down h-8 w-min sm:w-max sm:mx-0 sm:p-4 sm:h-16"
+						src="../../../logo-light.svg"
+						alt="Logo"
+					/>
+				</a>
 				<ul className="hidden font-sans sm:justify-center sm:m-2 sm:flex">
 					<Link
 						className="p-2 mx-1 text-sm font-semibold text-white transition-all duration-200 ease-linear bg-teal-700 rounded-md cursor-pointer sm:mx-3 lg:text-base drop-shadow-xl hover:bg-teal-200 hover:text-gray-900 lg:mx-5 lg:py-2 lg:px-3"
