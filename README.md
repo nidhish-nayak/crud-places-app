@@ -1,1 +1,3 @@
-# CRUD Application
+# Fullstack CRUD Places App
+
+## Content Structure
