@@ -1,6 +1,7 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import Hamburger from "../hamburger/hamburger";
+import NavLinks from "./navlinks";
 
 const Navbar = () => {
 	return (
@@ -13,31 +14,11 @@ const Navbar = () => {
 						alt="Logo"
 					/>
 				</a>
-				<ul className="hidden font-sans sm:justify-center sm:m-2 sm:flex">
-					<Link
-						className="p-2 mx-1 text-sm font-semibold text-white transition-all duration-200 ease-linear bg-teal-700 rounded-md cursor-pointer sm:mx-3 lg:text-base drop-shadow-xl hover:bg-teal-200 hover:text-gray-900 lg:mx-5 lg:py-2 lg:px-3"
-						to="/places/new"
-					>
-						+ Create
-					</Link>
-					<Link
-						className="p-2 mx-1 text-sm font-semibold text-gray-900 transition-all duration-200 ease-linear rounded-md cursor-pointer sm:mx-3 lg:text-base drop-shadow-xl hover:bg-teal-700 hover:text-gray-100 lg:mx-5 lg:py-2 lg:px-3"
-						to="/u1/places"
-					>
-						Places
-					</Link>
-					<Link
-						className="p-2 mx-1 text-sm font-semibold text-gray-900 transition-all duration-200 ease-linear rounded-md cursor-pointer sm:mx-3 lg:text-base drop-shadow-xl hover:bg-teal-700 hover:text-gray-100 lg:mx-5 lg:py-2 lg:px-3"
-						to="/"
-					>
-						Users
-					</Link>
-					<Link
-						className="p-2 mx-1 text-sm font-semibold text-gray-900 transition-all duration-200 ease-linear rounded-md cursor-pointer sm:mx-3 lg:text-base drop-shadow-xl hover:bg-teal-700 hover:text-gray-100 lg:mx-5 lg:mr-11 lg:py-2 lg:px-3"
-						to="/auth"
-					>
-						Login
-					</Link>
+				<ul className="items-center hidden font-sans sm:justify-center sm:m-2 sm:flex">
+					<NavLinks to="/places/new">+ Create</NavLinks>
+					<NavLinks to="/u1/places">Places</NavLinks>
+					<NavLinks to="/">Users</NavLinks>
+					<NavLinks to="/auth">Login</NavLinks>
 				</ul>
 				<Hamburger />
 			</nav>
