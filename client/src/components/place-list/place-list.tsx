@@ -2,9 +2,9 @@ import React from "react";
 
 import PlaceItem from "../place-item/place-item";
 
-import { PLACE_LIST_PROPS_TYPE } from "./place-list.types";
+import { PLACE_LIST_PROPS_TYPES } from "./place-list.types";
 
-const PlaceList: React.FC<PLACE_LIST_PROPS_TYPE> = (props) => {
+const PlaceList: React.FC<PLACE_LIST_PROPS_TYPES> = (props) => {
 	if (props.items.length === 0) {
 		return (
 			<div>
