@@ -1,5 +1,14 @@
+import Input from "../../components/input/input";
+
 const NewPlace = () => {
-	return <div>NEW PLACES HERE</div>;
+	return (
+		<section className="p-1 m-2">
+			<h1 className="text-xl font-semibold">Create New Place</h1>
+			<form action="">
+				<Input />
+			</form>
+		</section>
+	);
 };
 
 export default NewPlace;

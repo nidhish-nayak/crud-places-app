@@ -6,3 +6,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	max-width: 1980px;
+	margin: 0 auto;
+}
