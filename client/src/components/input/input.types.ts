@@ -1,5 +1,5 @@
 export type INPUT_PROPS_TYPES = {
-	id: string;
+	id?: string;
 	type?: string;
 	placeholder?: string;
 	element?: string;

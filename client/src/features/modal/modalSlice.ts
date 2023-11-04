@@ -6,6 +6,11 @@ const initialState: MODAL_TYPES = {
 	isOpen: false,
 	title: "",
 	description: "",
+	location: {
+		lat: 0,
+		lng: 0,
+	},
+	zoom: 16,
 };
 
 const modalSlice = createSlice({
