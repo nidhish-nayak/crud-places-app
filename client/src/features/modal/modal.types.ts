@@ -3,4 +3,9 @@ export type MODAL_TYPES = {
 	onClose?: () => void;
 	title: string;
 	description: string;
+	location: {
+		lat: number;
+		lng: number;
+	};
+	zoom: number;
 };

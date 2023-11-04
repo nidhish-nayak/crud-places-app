@@ -1,4 +1,4 @@
 export type MAP_PROPS_TYPES = {
-	lat: number;
-	long: number;
+	location: { lat: number; lng: number };
+	zoom: number;
 };
