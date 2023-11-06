@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useReducer } from "react";
+import inputReducer from "./input.reducer";
 import { INPUT_PROPS_TYPES } from "./input.types";
 
 const Input: React.FC<INPUT_PROPS_TYPES> = (props) => {
-	const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		return event;
+	const [inputState, dispatch] = useReducer(inputReducer, {
+		value: "",
+		isValid: false,
+	});
+
+	const changeHandler = (
+		event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		dispatch({ type: "CHANGE", val: event.target.value });
 	};
 
 	const element =
@@ -11,16 +19,21 @@ const Input: React.FC<INPUT_PROPS_TYPES> = (props) => {
 			<input
 				id={props.id}
 				type={props.type}
+				name="input"
 				placeholder={props.placeholder}
 				className="p-2 rounded-sm"
 				onChange={changeHandler}
+				value={inputState.value}
 			/>
 		) : (
 			<textarea
 				id={props.id}
+				name="text"
 				rows={props.rows || 3}
 				placeholder={props.placeholder}
 				className="p-2 rounded-sm min-h-[200px]"
+				onChange={changeHandler}
+				value={inputState.value}
 			/>
 		);
 

@@ -6,3 +6,13 @@ export type INPUT_PROPS_TYPES = {
 	rows?: number;
 	label?: string;
 };
+
+export type INPUT_STATE_TYPES = {
+	value: string;
+	isValid: boolean;
+};
+
+export type INPUT_ACTION_TYPES = {
+	type: string;
+	val: string;
+};
