@@ -1,4 +1,5 @@
 import Input from "../../components/input/input";
+import { VALIDATOR_REQUIRE } from "../../utils/validators";
 
 const NewPlace = () => {
 	return (
@@ -6,7 +7,7 @@ const NewPlace = () => {
 			<h1 className="text-xl font-semibold">Create New Place</h1>
 			<form
 				action=""
-				className="flex flex-col max-w-xl gap-2 p-4 text-lg rounded-md bg-zinc-300"
+				className="flex flex-col max-w-xl gap-2 p-4 text-lg rounded-md bg-zinc-200"
 			>
 				<Input
 					id="input"
@@ -14,12 +15,16 @@ const NewPlace = () => {
 					type="text"
 					label="Title"
 					placeholder="Enter here..."
+					errorText="Please enter a valid title."
+					validators={[VALIDATOR_REQUIRE()]}
 				/>
 				<Input
 					id="text"
 					type="text"
 					label="Message"
 					placeholder="Text here..."
+					errorText="Please enter a valid message."
+					validators={[VALIDATOR_REQUIRE()]}
 				/>
 			</form>
 		</section>

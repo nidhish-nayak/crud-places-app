@@ -6,12 +6,25 @@ const Input: React.FC<INPUT_PROPS_TYPES> = (props) => {
 	const [inputState, dispatch] = useReducer(inputReducer, {
 		value: "",
 		isValid: false,
+		isTouched: false,
 	});
 
 	const changeHandler = (
 		event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
-		dispatch({ type: "CHANGE", val: event.target.value });
+		dispatch({
+			type: "CHANGE",
+			val: event.target.value,
+			validators: props.validators,
+		});
+	};
+
+	const touchHandler = () => {
+		dispatch({
+			type: "TOUCH",
+			val: "",
+			validators: [{ type: "" }],
+		});
 	};
 
 	const element =
@@ -21,9 +34,14 @@ const Input: React.FC<INPUT_PROPS_TYPES> = (props) => {
 				type={props.type}
 				name="input"
 				placeholder={props.placeholder}
-				className="p-2 rounded-sm"
+				className={`${
+					!inputState.isValid &&
+					inputState.isTouched &&
+					"border border-red-500 bg-red-100"
+				} p-2 rounded-sm`}
 				onChange={changeHandler}
 				value={inputState.value}
+				onBlur={touchHandler}
 			/>
 		) : (
 			<textarea
@@ -31,9 +49,14 @@ const Input: React.FC<INPUT_PROPS_TYPES> = (props) => {
 				name="text"
 				rows={props.rows || 3}
 				placeholder={props.placeholder}
-				className="p-2 rounded-sm min-h-[200px]"
+				className={`${
+					!inputState.isValid &&
+					inputState.isTouched &&
+					"border border-red-500 bg-red-100"
+				} p-2 rounded-sm min-h-[200px]`}
 				onChange={changeHandler}
 				value={inputState.value}
+				onBlur={touchHandler}
 			/>
 		);
 
@@ -43,6 +66,9 @@ const Input: React.FC<INPUT_PROPS_TYPES> = (props) => {
 				{props.label}
 			</label>
 			{element}
+			{!inputState.isValid && inputState.isTouched && (
+				<p className="text-red-500">{props.errorText}</p>
+			)}
 		</div>
 	);
 };
