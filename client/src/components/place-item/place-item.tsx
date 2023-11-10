@@ -36,7 +36,7 @@ const PlaceItem: React.FC<USER_PLACE_TYPES> = (props) => {
 					<h2 className="p-1 -mb-2 font-sans text-xl font-bold">
 						{props.title}
 					</h2>
-					<h3 className="p-1 mb-4 font-sans text-md">{props.address}</h3>
+					<h3 className="p-1 mb-0 font-sans text-md">{props.address}</h3>
 					<p className="p-1 font-sans text-sm">{props.description}</p>
 				</div>
 			</div>
