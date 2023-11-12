@@ -1,5 +1,5 @@
 export type INPUT_PROPS_TYPES = {
-	id?: string;
+	id: string;
 	type?: string;
 	placeholder?: string;
 	element?: string;
@@ -7,6 +7,7 @@ export type INPUT_PROPS_TYPES = {
 	label?: string;
 	errorText?: string;
 	validators: { type: string }[];
+	onInput: (arg0: string, arg1: string, arg2: boolean) => void;
 };
 
 export type INPUT_STATE_TYPES = {

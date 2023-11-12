@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import inputReducer from "./input.reducer";
 import { INPUT_PROPS_TYPES } from "./input.types";
 
@@ -8,6 +8,13 @@ const Input: React.FC<INPUT_PROPS_TYPES> = (props) => {
 		isValid: false,
 		isTouched: false,
 	});
+
+	const { id, onInput } = props;
+	const { value, isValid } = inputState;
+
+	useEffect(() => {
+		onInput(id, value, isValid);
+	}, [id, value, isValid, onInput]);
 
 	const changeHandler = (
 		event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

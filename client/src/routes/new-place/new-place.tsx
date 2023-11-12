@@ -2,6 +2,8 @@ import Input from "../../components/input/input";
 import { VALIDATOR_REQUIRE } from "../../utils/validators";
 
 const NewPlace = () => {
+	const titleInputHandler = (id, value, isValid) => {};
+
 	return (
 		<section className="flex flex-col gap-8 p-1 m-2">
 			<h1 className="text-xl font-semibold">Create New Place</h1>
@@ -17,6 +19,7 @@ const NewPlace = () => {
 					placeholder="Enter here..."
 					errorText="Please enter a valid title."
 					validators={[VALIDATOR_REQUIRE()]}
+					onInput={titleInputHandler}
 				/>
 				<Input
 					id="text"
@@ -25,6 +28,7 @@ const NewPlace = () => {
 					placeholder="Text here..."
 					errorText="Please enter a valid message."
 					validators={[VALIDATOR_REQUIRE()]}
+					onInput={titleInputHandler}
 				/>
 			</form>
 		</section>
