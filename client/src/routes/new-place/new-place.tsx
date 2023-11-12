@@ -1,8 +1,11 @@
+import { useCallback } from "react";
+
 import Input from "../../components/input/input";
-import { VALIDATOR_REQUIRE } from "../../utils/validators";
+import { VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE } from "../../utils/validators";
 
 const NewPlace = () => {
-	const titleInputHandler = (id, value, isValid) => {};
+	const titleInputHandler = useCallback((id, value, isValid) => {}, []);
+	const descriptionInputHandler = useCallback((id, value, isValid) => {}, []);
 
 	return (
 		<section className="flex flex-col gap-8 p-1 m-2">
@@ -14,7 +17,6 @@ const NewPlace = () => {
 				<Input
 					id="input"
 					element="input"
-					type="text"
 					label="Title"
 					placeholder="Enter here..."
 					errorText="Please enter a valid title."
@@ -22,13 +24,13 @@ const NewPlace = () => {
 					onInput={titleInputHandler}
 				/>
 				<Input
-					id="text"
-					type="text"
-					label="Message"
+					id="description"
+					element="textarea"
+					label="Description"
 					placeholder="Text here..."
-					errorText="Please enter a valid message."
-					validators={[VALIDATOR_REQUIRE()]}
-					onInput={titleInputHandler}
+					errorText="Please enter a valid message with 5 or more characters!"
+					validators={[VALIDATOR_MINLENGTH(5)]}
+					onInput={descriptionInputHandler}
 				/>
 			</form>
 		</section>
