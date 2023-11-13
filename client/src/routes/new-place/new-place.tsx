@@ -1,9 +1,25 @@
-import { useCallback } from "react";
+import { useCallback, useReducer } from "react";
 
 import Input from "../../components/input/input";
 import { VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE } from "../../utils/validators";
+import formReducer from "./new-place.reducer";
+import { NEW_PLACE_STATE_TYPES } from "./new-place.types";
 
-const NewPlace = () => {
+const NewPlace: React.FC<NEW_PLACE_STATE_TYPES> = () => {
+	const [formState, dispatch] = useReducer(formReducer, {
+		inputs: {
+			title: {
+				value: "",
+				isValid: false,
+			},
+			description: {
+				value: "",
+				isValid: false,
+			},
+		},
+		isValid: false,
+	});
+
 	const titleInputHandler = useCallback((id, value, isValid) => {}, []);
 	const descriptionInputHandler = useCallback((id, value, isValid) => {}, []);
 
