@@ -3,9 +3,8 @@ import { useCallback, useReducer } from "react";
 import Input from "../../components/input/input";
 import { VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE } from "../../utils/validators";
 import formReducer from "./new-place.reducer";
-import { NEW_PLACE_STATE_TYPES } from "./new-place.types";
 
-const NewPlace: React.FC<NEW_PLACE_STATE_TYPES> = () => {
+const NewPlace = () => {
 	const [formState, dispatch] = useReducer(formReducer, {
 		inputs: {
 			title: {
@@ -34,7 +33,7 @@ const NewPlace: React.FC<NEW_PLACE_STATE_TYPES> = () => {
 
 	const placeSubmitHandler = (event: React.FormEvent) => {
 		event?.preventDefault();
-		console.log(formState.inputs);
+		console.log(formState.inputs); // send this to backend
 	};
 
 	return (
@@ -62,7 +61,27 @@ const NewPlace: React.FC<NEW_PLACE_STATE_TYPES> = () => {
 					validators={[VALIDATOR_MINLENGTH(5)]}
 					onInput={inputHandler}
 				/>
-				<button type="submit" disabled={!formState.isValid}>
+				<Input
+					id="address"
+					element="input"
+					label="Address"
+					placeholder="Address here..."
+					errorText="Please enter a valid address!"
+					validators={[VALIDATOR_REQUIRE()]}
+					onInput={inputHandler}
+				/>
+				<button
+					type="submit"
+					className={
+						`mt-2 p-2 text-base font-semibold text-white bg-teal-700 rounded-md cursor-pointer hover:bg-teal-900 w-fit` +
+						`${
+							formState.isValid
+								? ""
+								: " bg-zinc-300 hover:bg-zinc-300 cursor-default"
+						}`
+					}
+					disabled={!formState.isValid}
+				>
 					ADD PLACE
 				</button>
 			</form>

@@ -60,7 +60,7 @@ const Input: React.FC<INPUT_PROPS_TYPES> = (props) => {
 					!inputState.isValid &&
 					inputState.isTouched &&
 					"border border-red-500 bg-red-100"
-				} p-2 rounded-sm min-h-[200px]`}
+				} p-2 rounded-sm min-h-[150px]`}
 				onChange={changeHandler}
 				value={inputState.value}
 				onBlur={touchHandler}
