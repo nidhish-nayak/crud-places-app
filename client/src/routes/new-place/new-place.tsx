@@ -20,8 +20,17 @@ const NewPlace: React.FC<NEW_PLACE_STATE_TYPES> = () => {
 		isValid: false,
 	});
 
-	const titleInputHandler = useCallback((id, value, isValid) => {}, []);
-	const descriptionInputHandler = useCallback((id, value, isValid) => {}, []);
+	const inputHandler = useCallback(
+		(id: string, value: string, isValid: boolean) => {
+			dispatch({
+				type: "INPUT_CHANGE",
+				value: value,
+				isValid: isValid,
+				inputId: id,
+			});
+		},
+		[]
+	);
 
 	return (
 		<section className="flex flex-col gap-8 p-1 m-2">
@@ -31,13 +40,13 @@ const NewPlace: React.FC<NEW_PLACE_STATE_TYPES> = () => {
 				className="flex flex-col max-w-xl gap-2 p-4 text-lg rounded-md bg-zinc-200"
 			>
 				<Input
-					id="input"
+					id="title"
 					element="input"
 					label="Title"
 					placeholder="Enter here..."
 					errorText="Please enter a valid title."
 					validators={[VALIDATOR_REQUIRE()]}
-					onInput={titleInputHandler}
+					onInput={inputHandler}
 				/>
 				<Input
 					id="description"
@@ -46,8 +55,11 @@ const NewPlace: React.FC<NEW_PLACE_STATE_TYPES> = () => {
 					placeholder="Text here..."
 					errorText="Please enter a valid message with 5 or more characters!"
 					validators={[VALIDATOR_MINLENGTH(5)]}
-					onInput={descriptionInputHandler}
+					onInput={inputHandler}
 				/>
+				<button type="submit" disabled={!formState.isValid}>
+					ADD PLACE
+				</button>
 			</form>
 		</section>
 	);

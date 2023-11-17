@@ -1,10 +1,6 @@
 export type NEW_PLACE_STATE_TYPES = {
 	inputs: {
-		title: {
-			value: string;
-			isValid: boolean;
-		};
-		description: {
+		[key: string]: {
 			value: string;
 			isValid: boolean;
 		};
@@ -14,7 +10,7 @@ export type NEW_PLACE_STATE_TYPES = {
 
 export type NEW_PLACE_ACTION_TYPES = {
 	type: string;
-	payload: string;
+	value: string;
 	inputId: string;
 	isValid: boolean;
 };
