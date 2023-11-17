@@ -32,11 +32,16 @@ const NewPlace: React.FC<NEW_PLACE_STATE_TYPES> = () => {
 		[]
 	);
 
+	const placeSubmitHandler = (event: React.FormEvent) => {
+		event?.preventDefault();
+		console.log(formState.inputs);
+	};
+
 	return (
 		<section className="flex flex-col gap-8 p-1 m-2">
 			<h1 className="text-xl font-semibold">Create New Place</h1>
 			<form
-				action=""
+				onSubmit={placeSubmitHandler}
 				className="flex flex-col max-w-xl gap-2 p-4 text-lg rounded-md bg-zinc-200"
 			>
 				<Input
