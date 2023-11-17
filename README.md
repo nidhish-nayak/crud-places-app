@@ -1,3 +1,3 @@
-# Fullstack CRUD Places App
+# Fullstack TravelSphere App
 
 ## Content Structure
