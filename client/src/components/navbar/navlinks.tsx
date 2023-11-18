@@ -10,18 +10,18 @@ const NavLinks = (props: NAVBAR_PROPS_TYPES) => {
 		<Link
 			className={
 				` ${
-					props.children === "+ Create"
-						? "text-white bg-teal-700 hover:bg-teal-200 hover:text-gray-900 "
+					props.children === "Login"
+						? "bg-teal-700 text-white hover:bg-teal-950 mx-3 "
 						: "text-gray-900 hover:text-gray-100 hover:bg-teal-700 "
 				}` +
-				`relative flex items-center justify-center p-2 mx-1 text-sm font-semibold transition-all duration-200 ease-linear rounded-md cursor-pointer sm:mx-3 lg:text-base drop-shadow-xl lg:mx-5 lg:py-2 lg:px-3 `
+				`relative flex items-center justify-center p-2 text-sm font-semibold transition-all duration-200 ease-linear rounded cursor-pointer lg:text-base lg:py-2 lg:px-3 `
 			}
 			to={props.to}
 		>
 			{props.children}
 			<div
 				className={
-					isLinkActive ? "h-[1px] bottom-0 bg-teal-700 w-[75%] absolute" : ""
+					isLinkActive ? "h-[2px] bottom-0 bg-teal-700 w-[75%] absolute" : ""
 				}
 			/>
 		</Link>
